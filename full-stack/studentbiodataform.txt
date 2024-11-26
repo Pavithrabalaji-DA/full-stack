@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Bio Data Form</title>
+    <style>
+        /* Background and body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe); /* Gradient background */
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form container styling */
+        #bioDataForm {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        /* Heading styling */
+        h2 {
+            color: #333;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        /* Input field styling */
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Displayed bio data styling */
+        #bioData {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="bioDataForm">
+        <h2>Student Bio Data Form</h2>
+        <form id="studentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="age">Age:</label>
+            <input type="text" id="age" placeholder="Enter your age" required>
+            
+            <label for="course">Course:</label>
+            <input type="text" id="course" placeholder="Enter your course" required>
+            
+            <button type="button" onclick="displayBioData()">Submit Bio Data</button>
+        </form>
+        <div id="bioData"></div>
+    </div>
+
+    <script>
+        function displayBioData() {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var course = document.getElementById("course").value;
+
+            if (name && age && course) {
+                var bioData = "<strong>Name:</strong> " + name + "<br>" +
+                              "<strong>Age:</strong> " + age + "<br>" +
+                              "<strong>Course:</strong> " + course;
+
+                document.getElementById("bioData").innerHTML = "<h2>Student Bio Data</h2>" + bioData;
+            } else {
+                document.getElementById("bioData").innerHTML = "<p style='color: red;'>Please fill out all fields.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
