@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light gradient background */
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+            width: 300px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            display: block;
+            margin: 20px auto;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            color: #007bff;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <p>This is an example paragraph demonstrating various tags with added styles.</p>
+    <hr>
+    <!-- This is a comment -->
+    <form>
+        <input type="text" placeholder="Enter text">
+        <textarea placeholder="Type here..."></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <img src="image.jpg" alt="Example Image">
+    <audio controls>
+        <source src="hello.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <a href="#">Click Here</a>
+</body>
+</html>
