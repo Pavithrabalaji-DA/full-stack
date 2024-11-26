@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #loginForm {
+            background-color: #ffffff; /* White background for the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #passwordMessage {
+            font-size: 12px;
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #28a745; /* Green background */
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Login Form</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+        <label for="password">Password (Alphanumeric):</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <div id="passwordMessage"></div>
+        <button type="button" onclick="login()">Login</button>
+        <div id="message"></div>
+    </form>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var passwordMessage = document.getElementById("passwordMessage");
+
+            // Check if password is alphanumeric
+            if (!/^[a-zA-Z0-9]+$/.test(password)) {
+                passwordMessage.innerHTML = "Password must be alphanumeric.";
+                return;
+            } else {
+                passwordMessage.innerHTML = "";
+            }
+
+            // Check credentials
+            if (username === "your" && password === "password1") {
+                document.getElementById("message").innerHTML = "Login successful!";
+            } else {
+                document.getElementById("message").innerHTML = "Invalid username or password. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
